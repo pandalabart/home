@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panda Art Lab - Print on Demand | Персонализирани продукти</title>
+<meta name="description" content="Panda Art Lab Print on Demand - персонализирани тениски, чаши, чанти, стикери и постери, произведени от проверени европейски доставчици.">
+<meta property="og:title" content="Panda Art Lab - One Creative Brand. Endless Possibilities.">
+<meta property="og:description" content="Персонализирани print on demand продукти от проверени европейски доставчици.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Panda Art Lab",
+  "url": "https://pandaartlab.com",
+  "description": "Creative ecosystem of digital products, handmade goods, decor, custom sewing, kids art atelier and print on demand.",
+  "brand": "Panda Art Lab"
+}
+</script>
+<style>
+:root{
+  /* base - cream taken from brand sheets (#FAF9F7) */
+  --cream:#FAF9F7;
+  --cream-deep:#EFEBE4;
+  --ink:#1F1D1A;
+  --ink-soft:#4A453D;
+  --line:#E4DED3;
+  /* print on demand accent - exact slate blue from brand sheet */
+  --pod:#566B88;
+  --pod-deep:#3F5170;
+  --pod-mid:#A6B2C0;
+  --pod-pale:#C6CFDC;
+  --pod-wash:#EAEEF3;
+  /* sub-brand accents - exact hex sampled from brand sheets */
+  --c-digital:#527C78;   /* teal   */
+  --c-handmade:#B97278;  /* rose   */
+  --c-moss:#656D46;      /* olive  */
+  --c-sewing:#8878A8;    /* purple */
+  --c-atelier:#D5A35C;   /* gold   */
+  --c-pod:#566B88;       /* slate  */
+  --radius:16px;
+  --maxw:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Jost',sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:600;line-height:1.08;letter-spacing:-0.01em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.eyebrow{font-family:'Jost';font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--pod)}
+
+/* ---------- HEADER ---------- */
+header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(245,241,232,.86);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .logo-mark{width:40px;height:40px;object-fit:contain;flex:none}
+.brand .wm{display:flex;flex-direction:column;line-height:1}
+.brand .wm b{font-family:'Fraunces';font-weight:600;font-size:19px;letter-spacing:.02em}
+.brand .wm span{font-family:'Jost';font-size:9.5px;letter-spacing:.42em;color:var(--ink-soft);margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--ink-soft);transition:color .2s}
+.nav-links a:hover{color:var(--pod)}
+.nav-links a.active{color:var(--pod);font-weight:600}
+.lang{display:flex;gap:2px;border:1px solid var(--line);border-radius:99px;padding:3px;background:var(--cream)}
+.lang button{font-family:'Jost';font-size:12px;font-weight:600;letter-spacing:.05em;border:none;background:none;color:var(--ink-soft);padding:5px 11px;border-radius:99px;cursor:pointer;transition:.2s}
+.lang button.on{background:var(--pod);color:#fff}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);margin:4px 0;transition:.25s}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;padding:70px 0 30px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(38px,6vw,68px);font-weight:600}
+.hero h1 em{font-style:italic;color:var(--pod)}
+.hero .lede{font-size:18px;color:var(--ink-soft);max-width:44ch;margin:22px 0 32px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:'Jost';font-size:15px;font-weight:600;letter-spacing:.02em;
+  padding:14px 26px;border-radius:99px;cursor:pointer;border:1.5px solid transparent;transition:.22s;
+}
+.btn-primary{background:var(--pod);color:#fff}
+.btn-primary:hover{background:var(--pod-deep);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--pod);color:var(--pod)}
+.btn svg{width:16px;height:16px}
+
+/* hero panda art */
+.hero-art{position:relative;display:flex;justify-content:center}
+.hero-art .blob{position:absolute;inset:-8% -4%;background:radial-gradient(circle at 60% 40%,var(--pod-wash),transparent 70%);z-index:0}
+.hero-art svg{position:relative;z-index:1;width:min(100%,420px);height:auto;filter:drop-shadow(0 24px 48px rgba(60,78,104,.18))}
+.hero-art .hero-logo{position:relative;z-index:1;width:min(78%,320px);height:auto;filter:drop-shadow(0 20px 40px rgba(31,29,26,.16))}
+
+/* ---------- MARQUEE strip ---------- */
+.strip{background:var(--pod);color:#fff;padding:15px 0;overflow:hidden;white-space:nowrap;margin-top:30px}
+.strip .track{display:inline-flex;gap:44px;animation:scroll 26s linear infinite;font-family:'Fraunces';font-style:italic;font-size:17px}
+.strip span{display:inline-flex;align-items:center;gap:44px}
+.strip .dot{width:6px;height:6px;border-radius:50%;background:var(--pod-pale)}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- SECTION shells ---------- */
+section{padding:74px 0}
+.sec-head{max-width:620px;margin-bottom:44px}
+.sec-head h2{font-size:clamp(28px,4vw,42px);margin:12px 0 14px}
+.sec-head p{color:var(--ink-soft);font-size:17px}
+
+/* ---------- DIRECTIONS grid ---------- */
+.dirs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.dir{
+  position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 24px 24px;overflow:hidden;transition:.25s;display:flex;flex-direction:column;min-height:270px;
+}
+.dir::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--acc)}
+.dir .dir-logo{width:96px;height:96px;object-fit:contain;object-position:left center;margin:6px 0 16px;display:block}
+.dir h3{font-size:21px;margin-bottom:7px}
+.dir .sub{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-bottom:10px}
+.dir p{font-size:14px;color:var(--ink-soft);flex:1}
+.dir .foot{margin-top:16px;display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600}
+.dir.live{cursor:pointer}
+.dir.live:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(60,78,104,.14);border-color:var(--acc)}
+.dir.live .foot{color:var(--acc)}
+.dir.wip{opacity:.92}
+.badge-wip{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);background:var(--cream-deep);border-radius:99px;padding:5px 11px}
+.badge-live{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--acc);border-radius:99px;padding:5px 11px}
+
+/* ---------- POD SECTION ---------- */
+#pod{background:linear-gradient(180deg,var(--cream) 0%,var(--pod-wash) 100%);position:relative}
+.pod-hero{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;margin-bottom:60px}
+.pod-hero h2{font-size:clamp(30px,4.4vw,50px);margin:14px 0 18px}
+.pod-hero p{font-size:17px;color:var(--ink-soft);margin-bottom:14px}
+.pod-panel{background:#fff;border-radius:22px;padding:34px;border:1px solid var(--pod-pale);box-shadow:0 24px 50px rgba(60,78,104,.12)}
+.pod-panel h4{font-family:'Jost';font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--pod);margin-bottom:18px}
+.trust{display:flex;flex-direction:column;gap:16px}
+.trust li{display:flex;gap:14px;align-items:flex-start;list-style:none}
+.trust .ti{flex:none;width:38px;height:38px;border-radius:10px;background:var(--pod-wash);color:var(--pod);display:grid;place-items:center}
+.trust .ti svg{width:20px;height:20px}
+.trust b{font-family:'Jost';font-weight:600;font-size:15px;display:block}
+.trust small{color:var(--ink-soft);font-size:13.5px;line-height:1.45}
+
+/* products */
+.prod-head{max-width:560px;margin-bottom:34px}
+.prod-head h3{font-size:clamp(24px,3.4vw,34px);margin:10px 0 12px}
+.prod-head p{color:var(--ink-soft)}
+.notice{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--pod-pale);border-radius:99px;padding:9px 18px;font-size:13.5px;color:var(--pod-deep);font-weight:500;margin-top:6px}
+.notice svg{width:16px;height:16px;color:var(--pod)}
+.prods{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border-radius:var(--radius);border:1px solid var(--pod-pale);overflow:hidden;transition:.25s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-4px);box-shadow:0 22px 44px rgba(60,78,104,.15)}
+.card .art{aspect-ratio:1/1;background:#fff;display:grid;place-items:center;position:relative;overflow:hidden}
+.card .art img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.card:hover .art img{transform:scale(1.05)}
+.card .tag{position:absolute;top:12px;left:12px;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:#fff;color:var(--pod);border-radius:99px;padding:4px 10px;border:1px solid var(--pod-pale)}
+.card .body{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1}
+.card h4{font-family:'Fraunces';font-weight:600;font-size:19px;margin-bottom:6px}
+.card p{font-size:13.5px;color:var(--ink-soft);flex:1;margin-bottom:16px}
+.card .tech{font-size:11.5px;font-weight:600;letter-spacing:.05em;color:var(--pod);text-transform:uppercase;margin-bottom:14px}
+.card .req{width:100%;justify-content:center;padding:11px;font-size:14px}
+
+/* supplier gallery */
+.gal-head{max-width:560px;margin:66px 0 30px}
+.gal-head h3{font-size:clamp(24px,3.4vw,34px);margin:10px 0 12px}
+.gal-head p{color:var(--ink-soft)}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:16px}
+.gal-item{position:relative;overflow:hidden;border-radius:var(--radius);border:1px solid var(--pod-pale);margin:0;background:var(--pod-wash)}
+.gal-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.gal-item:hover img{transform:scale(1.06)}
+.gal-item figcaption{
+  position:absolute;left:0;right:0;bottom:0;
+  font-family:'Jost';font-size:13px;font-weight:500;color:#fff;
+  padding:22px 16px 13px;
+  background:linear-gradient(180deg,transparent,rgba(31,29,26,.82));
+}
+.gal-wide{grid-column:span 2;grid-row:span 2}
+@media(max-width:760px){
+  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}
+  .gal-wide{grid-column:span 2;grid-row:span 1}
+  .gal-wide{grid-row:span 2}
+}
+@media(max-width:480px){
+  .gallery{grid-template-columns:1fr;grid-auto-rows:200px}
+  .gal-wide{grid-column:span 1;grid-row:span 1}
+}
+
+/* how it works */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:16px}
+.step{background:#fff;border:1px solid var(--pod-pale);border-radius:var(--radius);padding:26px 22px;position:relative}
+.step .n{font-family:'Fraunces';font-style:italic;font-size:34px;color:var(--pod-pale);line-height:1}
+.step h4{font-family:'Fraunces';font-weight:600;font-size:18px;margin:8px 0 8px}
+.step p{font-size:13.5px;color:var(--ink-soft)}
+
+/* techs */
+.techs{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.chip{background:#fff;border:1px solid var(--pod-pale);border-radius:99px;padding:9px 18px;font-size:13.5px;font-weight:500;color:var(--pod-deep)}
+.chip b{color:var(--ink)}
+
+/* ---------- CONTACT ---------- */
+#contact{background:var(--pod-deep);color:#fff}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+#contact .eyebrow{color:var(--pod-pale)}
+#contact h2{font-size:clamp(30px,4.4vw,48px);color:#fff;margin:14px 0 18px}
+#contact .lede{color:var(--pod-pale);font-size:17px;max-width:42ch}
+.contact-info{margin-top:30px;display:flex;flex-direction:column;gap:18px}
+.contact-info a,.contact-info div{display:flex;gap:13px;align-items:center;color:#fff;font-size:15.5px}
+.contact-info svg{width:20px;height:20px;color:var(--pod-mid);flex:none}
+form{background:#fff;border-radius:22px;padding:34px;color:var(--ink)}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:13px;font-weight:600;letter-spacing:.02em;margin-bottom:7px;color:var(--ink)}
+.field input,.field select,.field textarea{
+  width:100%;font-family:'Jost';font-size:15px;color:var(--ink);
+  background:var(--cream);border:1.5px solid var(--line);border-radius:11px;padding:13px 15px;transition:.2s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--pod);background:#fff}
+.field textarea{resize:vertical;min-height:110px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;color:var(--ink-soft);margin-bottom:20px;line-height:1.4}
+.consent input{width:17px;height:17px;flex:none;margin-top:2px;accent-color:var(--pod)}
+form .btn-primary{width:100%;justify-content:center;padding:15px}
+.form-note{font-size:12px;color:var(--ink-soft);text-align:center;margin-top:14px}
+.form-ok{display:none;text-align:center;padding:22px 10px}
+.form-ok svg{width:52px;height:52px;color:var(--pod);margin:0 auto 14px}
+.form-ok h3{font-size:24px;margin-bottom:8px}
+.form-ok p{color:var(--ink-soft)}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--ink);color:#C9C2B4;padding:56px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px}
+footer .brand .wm b{color:#fff}
+footer .brand .wm span{color:#9a9384}
+footer .foot-logo{width:132px;height:auto;object-fit:contain}
+.foot-about{font-size:14px;color:#9a9384;max-width:36ch;margin-top:18px}
+.foot-col h5{font-family:'Jost';font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+.foot-col a{display:block;font-size:14px;color:#C9C2B4;padding:5px 0;transition:.2s}
+.foot-col a:hover{color:#fff}
+.foot-col .wipdot{font-size:10px;color:#6f6a5e;margin-left:6px}
+.foot-bottom{border-top:1px solid #333029;padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:#7d776b}
+
+/* ---------- responsive ---------- */
+@media(max-width:900px){
+  .hero-grid,.pod-hero,.contact-grid{grid-template-columns:1fr;gap:36px}
+  .hero-art{order:-1;max-width:340px;margin:0 auto}
+  .dirs,.prods{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:var(--cream);border-bottom:1px solid var(--line);padding:20px 28px;gap:6px}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:11px 0;width:100%;border-bottom:1px solid var(--line)}
+  .burger{display:block}
+}
+@media(max-width:560px){
+  .dirs,.prods,.steps,.two{grid-template-columns:1fr}
+  section{padding:54px 0}
+  .wrap{padding:0 20px}
+  .foot-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Panda Art Lab">
+      <img src="assets/logo-mark.png" alt="Panda Art Lab" class="logo-mark">
+      <span class="wm"><b>PANDA</b><span>ART · LAB</span></span>
+    </a>
+    <nav class="nav-links" id="navlinks">
+      <a href="#directions" data-i="nav_dirs">Направления</a>
+      <a href="#pod" class="active" data-i="nav_pod">Print on Demand</a>
+      <a href="#how" data-i="nav_how">Как работи</a>
+      <a href="#contact" data-i="nav_contact">Контакт</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:14px">
+      <div class="lang" role="group" aria-label="Language">
+        <button data-lang="bg" class="on">BG</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<a id="top"></a>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow" data-i="hero_eyebrow">Panda Art Lab · One Brand</span>
+      <h1 data-i="hero_h1">Една марка.<br><em>Много възможности.</em></h1>
+      <p class="lede" data-i="hero_lede">Творческа екосистема от услуги и продукти - обединена от една мисия: вдъхновение, качество и грижа във всичко, което създаваме.</p>
+      <div class="hero-cta">
+        <a href="#pod" class="btn btn-primary" data-i="hero_cta1">Разгледай Print on Demand
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#directions" class="btn btn-ghost" data-i="hero_cta2">Всички направления</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="blob"></div>
+      <img src="assets/logo-full.png" alt="Panda Art Lab" class="hero-logo">
+    </div>
+  </div>
+</section>
+
+<!-- ============ STRIP ============ -->
+<div class="strip" aria-hidden="true">
+  <div class="track">
+    <span data-i="strip"><i class="dot"></i>Тениски<i class="dot"></i>Чаши<i class="dot"></i>Tote чанти<i class="dot"></i>Стикери<i class="dot"></i>Постери<i class="dot"></i>Шапки<i class="dot"></i>Проверени европейски доставчици</span>
+    <span data-i="strip"><i class="dot"></i>Тениски<i class="dot"></i>Чаши<i class="dot"></i>Tote чанти<i class="dot"></i>Стикери<i class="dot"></i>Постери<i class="dot"></i>Шапки<i class="dot"></i>Проверени европейски доставчици</span>
+  </div>
+</div>
+
+<!-- ============ DIRECTIONS ============ -->
+<section id="directions">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i="dir_eyebrow">Направления</span>
+      <h2 data-i="dir_h2">Шест направления, една идентичност</h2>
+      <p data-i="dir_p">Всяко направление има собствен характер и цвят, но говори с общ глас. Днес активно е Print on Demand - останалите се подготвят.</p>
+    </div>
+    <div class="dirs">
+      <!-- POD (live) -->
+      <a href="#pod" class="dir live" style="--acc:var(--c-pod)">
+        <span class="badge-live" data-i="badge_live">● Активно</span>
+        <img class="dir-logo" src="assets/logo-pod.png" alt="Panda Art Lab Print on Demand">
+        <div class="sub">Print on Demand</div>
+        <h3 data-i="d_pod_h">Персонализирани продукти</h3>
+        <p data-i="d_pod_p">Тениски, чаши, чанти, стикери и постери - печат при поръчка от проверени европейски доставчици.</p>
+        <span class="foot" data-i="d_pod_f">Разгледай продуктите
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" style="width:15px;height:15px"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+      <!-- Digital -->
+      <div class="dir wip" style="--acc:var(--c-digital)">
+        <span class="badge-wip" data-i="badge_wip">◷ В разработка</span>
+        <img class="dir-logo" src="assets/logo-digital.png" alt="Panda Art Lab Digital Products">
+        <div class="sub" data-i="d_dig_s">Digital Products</div>
+        <h3 data-i="d_dig_h">Дигитални продукти</h3>
+        <p data-i="d_dig_p">Органайзери, планери, Notion и Canva шаблони, курсове и ресурси за продуктивност.</p>
+      </div>
+      <!-- Handmade -->
+      <div class="dir wip" style="--acc:var(--c-handmade)">
+        <span class="badge-wip" data-i="badge_wip">◷ В разработка</span>
+        <img class="dir-logo" src="assets/logo-handmade.png" alt="Panda Art Lab Handmade Bouquets">
+        <div class="sub" data-i="d_hand_s">Handmade Bouquets</div>
+        <h3 data-i="d_hand_h">Ръчна изработка на букети</h3>
+        <p data-i="d_hand_p">Ръчно изработени букети, подаръци и персонализирани изделия за всеки повод.</p>
+      </div>
+      <!-- Moss -->
+      <div class="dir wip" style="--acc:var(--c-moss)">
+        <span class="badge-wip" data-i="badge_wip">◷ В разработка</span>
+        <img class="dir-logo" src="assets/logo-moss.png" alt="Panda Art Lab Moss Decor">
+        <div class="sub" data-i="d_moss_s">Moss Decor</div>
+        <h3 data-i="d_moss_h">Декорация с мъх</h3>
+        <p data-i="d_moss_p">Стабилизиран мъх, зелени стени, картини и интериорни акценти, които носят живот.</p>
+      </div>
+      <!-- Sewing -->
+      <div class="dir wip" style="--acc:var(--c-sewing)">
+        <span class="badge-wip" data-i="badge_wip">◷ В разработка</span>
+        <img class="dir-logo" src="assets/logo-sewing.png" alt="Panda Art Lab Custom Sewing">
+        <div class="sub" data-i="d_sew_s">Custom Sewing</div>
+        <h3 data-i="d_sew_h">Шиене по поръчка</h3>
+        <p data-i="d_sew_p">Дрехи и аксесоари по твой дизайн и размер - качество, стил и внимание към детайла.</p>
+      </div>
+      <!-- Atelier -->
+      <div class="dir wip" style="--acc:var(--c-atelier)">
+        <span class="badge-wip" data-i="badge_wip">◷ В разработка</span>
+        <img class="dir-logo" src="assets/logo-atelier.png" alt="Panda Art Lab Kids Atelier">
+        <div class="sub" data-i="d_atel_s">Kids Atelier</div>
+        <h3 data-i="d_atel_h">Арт ателие за деца</h3>
+        <p data-i="d_atel_p">Уроци и работилници по рисуване и крафт техники във вдъхновяваща цветна среда.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRINT ON DEMAND ============ -->
+<section id="pod">
+  <div class="wrap">
+    <div class="pod-hero">
+      <div>
+        <span class="eyebrow" data-i="pod_eyebrow">Panda Art Lab · Print on Demand</span>
+        <h2 data-i="pod_h2">Твоят дизайн, отпечатан с качество</h2>
+        <p data-i="pod_p1">Персонализирани продукти, произведени при поръчка. Ти избираш продукта и идеята - ние се грижим за печата и доставката чрез проверени европейски партньори.</p>
+        <p data-i="pod_p2">Работим предимно с <strong>OPT OnDemand</strong> - европейски производствен партньор с над 20 години опит, 6 печатни технологии и доставка в 24–48 часа.</p>
+      </div>
+      <div class="pod-panel">
+        <h4 data-i="pod_trust_h">Защо проверени европейски доставчици</h4>
+        <ul class="trust">
+          <li>
+            <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <div><b data-i="pod_t1_b">Проверено производство в ЕС</b><small data-i="pod_t1_s">Продукцията се изработва в европейски съоръжения, отговарящи на стандартите на ЕС.</small></div>
+          </li>
+          <li>
+            <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <div><b data-i="pod_t2_b">Обработка на поръчка 24–48 часа</b><small data-i="pod_t2_s">Бърз обработващ цикъл от поръчка до изпращане, с проследима доставка.</small></div>
+          </li>
+          <li>
+            <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16v10H4zM4 7l8 6 8-6"/></svg></span>
+            <div><b data-i="pod_t3_b">6 печатни технологии</b><small data-i="pod_t3_s">DTG, ситопечат, сублимация, флекс/флок, бродерия и печат върху хартия.</small></div>
+          </li>
+          <li>
+            <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12v7a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-7"/><path d="M2 7h20l-2 5H4Z"/><path d="M12 12v8"/></svg></span>
+            <div><b data-i="pod_t4_b">4000+ артикула на склад</b><small data-i="pod_t4_s">Голям избор от заготовки - тениски, чаши, чанти и още, плюс ежедневни доставки.</small></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="prod-head">
+      <span class="eyebrow" data-i="prod_eyebrow">Каталог</span>
+      <h3 data-i="prod_h3">Какво можем да персонализираме</h3>
+      <p data-i="prod_p">Разгледай продуктовите типове. Всеки се произвежда при поръчка по твоя идея.</p>
+      <div class="notice">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v12H5.2L4 17.2Z"/><path d="M8 9h8M8 12h5"/></svg>
+        <span data-i="prod_notice">Онлайн поръчки не се приемат - свържи се с нас за оферта чрез формата.</span>
+      </div>
+    </div>
+
+    <div class="prods" id="prods"><!-- injected by JS --></div>
+
+    <!-- supplier gallery -->
+    <div class="gal-head">
+      <span class="eyebrow" data-i="gal_eyebrow">Нашият производствен партньор</span>
+      <h3 data-i="gal_h3">Погледни отвътре в производството</h3>
+      <p data-i="gal_p">Снимки от съоръженията на нашия проверен европейски доставчик OPT OnDemand - където се отпечатват твоите продукти.</p>
+    </div>
+    <div class="gallery">
+      <figure class="gal-item gal-wide">
+        <img src="assets/gallery/g-carousel.webp" alt="Индустриална ситопечатна карусел машина - OPT OnDemand" loading="lazy">
+        <figcaption data-i="gal_c1">Автоматизиран ситопечат - до 15 000 артикула на ден</figcaption>
+      </figure>
+      <figure class="gal-item">
+        <img src="assets/gallery/g-tshirts.webp" alt="Печат на тениски по поръчка" loading="lazy">
+        <figcaption data-i="gal_c2">DTG печат на тениски</figcaption>
+      </figure>
+      <figure class="gal-item">
+        <img src="assets/gallery/g-screenprint.webp" alt="Ситопечатни глави с боя" loading="lazy">
+        <figcaption data-i="gal_c3">Многоцветен ситопечат</figcaption>
+      </figure>
+      <figure class="gal-item">
+        <img src="assets/gallery/g-mugs.webp" alt="Персонализирани чаши, готови за печат" loading="lazy">
+        <figcaption data-i="gal_c4">Чаши със сублимационен печат</figcaption>
+      </figure>
+      <figure class="gal-item">
+        <img src="assets/gallery/g-workstations.webp" alt="Работни станции за обработка на поръчки" loading="lazy">
+        <figcaption data-i="gal_c5">Обработка на поръчки 24/7</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i="how_eyebrow">Процес</span>
+      <h2 data-i="how_h2">Как работи поръчката</h2>
+      <p data-i="how_p">Прозрачен процес - от идея до готов продукт пред вратата ти.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h4 data-i="s1_h">Свържи се</h4><p data-i="s1_p">Попълни формата с продукта, количеството и идеята си. Прикачи дизайн, ако имаш.</p></div>
+      <div class="step"><div class="n">02</div><h4 data-i="s2_h">Оферта и мостра</h4><p data-i="s2_p">Изпращаме цена и при желание тестов печат, за да одобриш качеството.</p></div>
+      <div class="step"><div class="n">03</div><h4 data-i="s3_h">Производство</h4><p data-i="s3_p">Проверен европейски доставчик отпечатва поръчката с избраната технология.</p></div>
+      <div class="step"><div class="n">04</div><h4 data-i="s4_h">Контрол на качеството</h4><p data-i="s4_p">Проверяваме всяка бройка поотделно преди да я предадем на крайния клиент.</p></div>
+      <div class="step"><div class="n">05</div><h4 data-i="s5_h">Обработка на поръчка</h4><p data-i="s5_p">Обработка до 48 часа. Доставката може да отнеме 7–10 работни дни, с проследяване.</p></div>
+    </div>
+    <div class="techs" style="margin-top:34px">
+      <span class="chip" data-i="chip1"><b>DTG</b> · Direct to Garment</span>
+      <span class="chip" data-i="chip2"><b>Ситопечат</b> · до 15 000 бр./ден</span>
+      <span class="chip" data-i="chip3"><b>Сублимация</b></span>
+      <span class="chip" data-i="chip4"><b>Флекс / Флок</b></span>
+      <span class="chip" data-i="chip5"><b>Бродерия</b></span>
+      <span class="chip" data-i="chip6"><b>Печат върху хартия</b> · постери</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow" data-i="c_eyebrow">Контакт</span>
+      <h2 data-i="c_h2">Заяви оферта за твоя проект</h2>
+      <p class="lede" data-i="c_lede">Разкажи ни какво искаш да персонализираш. Отговаряме с оферта в рамките на 1–2 работни дни.</p>
+      <div class="contact-info">
+
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          <span data-i="c_loc">София, България</span>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <span data-i="c_hours">Отговор до 1–2 работни дни</span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <!-- NOTE: replace FORM_ID below with your Formspree ID (https://formspree.io) to receive emails -->
+      <form id="podform" action="https://formspree.io/f/mqevjwed" method="POST">
+        <div class="two">
+          <div class="field">
+            <label data-i="f_name">Име</label>
+            <input type="text" name="name" required data-ph="Твоето име">
+          </div>
+          <div class="field">
+            <label data-i="f_email">Имейл</label>
+            <input type="email" name="email" required data-ph="you@email.com">
+          </div>
+        </div>
+        <div class="field">
+          <label data-i="f_prod">Продукт</label>
+          <select name="product" required>
+            <option value="" data-i="f_prod_ph">Избери продукт…</option>
+            <option data-i="opt_tshirt">Тениски и облекло</option>
+            <option data-i="opt_mug">Чаши и съдове</option>
+            <option data-i="opt_tote">Tote чанти</option>
+            <option data-i="opt_sticker">Стикери</option>
+            <option data-i="opt_poster">Постери и стенно изкуство</option>
+            <option data-i="opt_cap">Шапки и аксесоари</option>
+            <option data-i="opt_other">Друго / комбинирано</option>
+          </select>
+        </div>
+        <div class="two">
+          <div class="field">
+            <label data-i="f_qty">Количество (прибл.)</label>
+            <input type="text" name="quantity" data-ph="напр. 25 бр.">
+          </div>
+          <div class="field">
+            <label data-i="f_phone">Телефон (по избор)</label>
+            <input type="tel" name="phone" data-ph="+359…">
+          </div>
+        </div>
+        <div class="field">
+          <label data-i="f_msg">Твоята идея</label>
+          <textarea name="message" required data-ph="Опиши дизайна, цветовете, срока…"></textarea>
+        </div>
+        <label class="consent">
+          <input type="checkbox" required>
+          <span data-i="f_consent">Съгласен съм данните ми да бъдат използвани за отговор на запитването ми, съгласно Политиката за поверителност.</span>
+        </label>
+        <button type="submit" class="btn btn-primary" data-i="f_submit">Изпрати запитване
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4Z" stroke-linejoin="round"/></svg>
+        </button>
+        <p class="form-note" data-i="f_note">Няма да приемаме плащания през сайта - само запитвания.</p>
+      </form>
+
+      <div class="form-ok" id="formok">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>
+        <h3 data-i="ok_h">Благодарим!</h3>
+        <p data-i="ok_p">Получихме запитването ти и ще се свържем скоро с оферта.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand">
+          <img src="assets/logo-full-white.png" alt="Panda Art Lab" class="foot-logo">
+        </div>
+        <p class="foot-about" data-i="foot_about">Една творческа марка с много възможности. Дигитални продукти, ръчна изработка, декорация, шиене, арт ателие и print on demand.</p>
+      </div>
+      <div class="foot-col">
+        <h5 data-i="foot_dir_h">Направления</h5>
+        <a href="#pod" data-i="foot_pod">Print on Demand</a>
+        <a href="#directions" data-i="foot_dig">Дигитални продукти <span class="wipdot" data-i="wip_s">скоро</span></a>
+        <a href="#directions" data-i="foot_hand">Ръчна изработка <span class="wipdot" data-i="wip_s">скоро</span></a>
+        <a href="#directions" data-i="foot_moss">Декорация с мъх <span class="wipdot" data-i="wip_s">скоро</span></a>
+        <a href="#directions" data-i="foot_sew">Шиене по поръчка <span class="wipdot" data-i="wip_s">скоро</span></a>
+        <a href="#directions" data-i="foot_atel">Арт ателие за деца <span class="wipdot" data-i="wip_s">скоро</span></a>
+      </div>
+      <div class="foot-col">
+        <h5 data-i="foot_contact_h">Контакт</h5>
+     
+        <a href="#contact" data-i="foot_form">Формуляр за запитване</a>
+        <a href="#how" data-i="foot_how">Как работи</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> Panda Art Lab</span>
+      <span data-i="foot_legal">Privacy Policy · Cookies · Terms</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ---------- product catalog data ---------- */
+const PRODUCTS = [
+  {key:'tshirt', tag:'DTG · Ситопечат', icon:'M16 4 9 7l-2 4 3 1v8h6v-8l3-1-2-4Z',
+   bg:'Тениски и облекло', bp:'Меки памучни тениски, суитшърти и повече - печат в пълноцветен DTG или ситопечат.',
+   eg:'T-shirts & apparel', ep:'Soft cotton tees, sweatshirts and more - full-colour DTG or screen printing.', et:'DTG · Screen print'},
+  {key:'mug', tag:'Сублимация', icon:'M6 5h10v12H6zM16 8h2a3 3 0 0 1 0 6h-2',
+   bg:'Чаши и съдове', bp:'Керамични чаши с траен сублимационен печат - идеални за подаръци и брандиране.',
+   eg:'Mugs & drinkware', ep:'Ceramic mugs with durable dye-sublimation print - perfect for gifts and branding.', et:'Dye-sublimation'},
+  {key:'tote', tag:'Ситопечат', icon:'M7 8V6a5 5 0 0 1 10 0v2M5 8h14l-1 12H6Z',
+   bg:'Tote чанти', bp:'Здрави текстилни чанти за пазар и ежедневие с твоя дизайн.',
+   eg:'Tote bags', ep:'Sturdy fabric totes for shopping and everyday, printed with your design.', et:'Screen print'},
+  {key:'sticker', tag:'Дигитален печат', icon:'M6 4h9l5 5v11H6zM15 4v5h5',
+   bg:'Стикери', bp:'Издръжливи стикери по поръчка във всякаква форма и размер.',
+   eg:'Stickers', ep:'Durable custom stickers in any shape and size.', et:'Digital print'},
+  {key:'poster', tag:'Печат върху хартия', icon:'M5 3h14v18H5zM8 8h8M8 12h8M8 16h5',
+   bg:'Постери и стенно изкуство', bp:'Постери и арт принтове с лазерна и мастилена технология върху качествена хартия.',
+   eg:'Posters & wall art', ep:'Posters and art prints via laser and ink technology on quality paper.', et:'Laser & ink'},
+  {key:'cap', tag:'Бродерия', icon:'M4 15a8 8 0 0 1 16 0M4 15h16v3H4zM8 15a4 4 0 0 1 8 0',
+   bg:'Шапки и аксесоари', bp:'Шапки с луксозна бродерия и други аксесоари, брандирани по поръчка.',
+   eg:'Caps & accessories', ep:'Caps with premium embroidery and other custom-branded accessories.', et:'Embroidery'}
+];
+
+/* ---------- i18n ---------- */
+const I18N = {
+  bg:{
+    nav_dirs:'Направления', nav_pod:'Print on Demand', nav_how:'Как работи', nav_contact:'Контакт',
+    hero_eyebrow:'Panda Art Lab · Една марка', hero_h1:'Една марка.<br><em>Много възможности.</em>',
+    hero_lede:'Творческа екосистема от услуги и продукти - обединена от една мисия: вдъхновение, качество и грижа във всичко, което създаваме.',
+    hero_cta1:'Разгледай Print on Demand', hero_cta2:'Всички направления',
+    dir_eyebrow:'Направления', dir_h2:'Шест направления, една идентичност',
+    dir_p:'Всяко направление има собствен характер и цвят, но говори с общ глас. Днес активно е Print on Demand - останалите се подготвят.',
+    badge_live:'● Активно', badge_wip:'◷ В разработка',
+    d_pod_h:'Персонализирани продукти', d_pod_p:'Тениски, чаши, чанти, стикери и постери - печат при поръчка от проверени европейски доставчици.', d_pod_f:'Разгледай продуктите',
+    d_dig_s:'Digital Products', d_dig_h:'Дигитални продукти', d_dig_p:'Органайзери, планери, Notion и Canva шаблони, курсове и ресурси за продуктивност.',
+    d_hand_s:'Handmade Bouquets', d_hand_h:'Ръчна изработка на букети', d_hand_p:'Ръчно изработени букети, подаръци и персонализирани изделия за всеки повод.',
+    d_moss_s:'Moss Decor', d_moss_h:'Декорация с мъх', d_moss_p:'Стабилизиран мъх, зелени стени, картини и интериорни акценти, които носят живот.',
+    d_sew_s:'Custom Sewing', d_sew_h:'Шиене по поръчка', d_sew_p:'Дрехи и аксесоари по твой дизайн и размер - качество, стил и внимание към детайла.',
+    d_atel_s:'Kids Atelier', d_atel_h:'Арт ателие за деца', d_atel_p:'Уроци и работилници по рисуване и крафт техники във вдъхновяваща цветна среда.',
+    strip:'<i class="dot"></i>Тениски<i class="dot"></i>Чаши<i class="dot"></i>Tote чанти<i class="dot"></i>Стикери<i class="dot"></i>Постери<i class="dot"></i>Шапки<i class="dot"></i>Проверени европейски доставчици',
+    pod_eyebrow:'Panda Art Lab · Print on Demand', pod_h2:'Твоят дизайн, отпечатан с качество',
+    pod_p1:'Персонализирани продукти, произведени при поръчка. Ти избираш продукта и идеята - ние се грижим за печата и доставката чрез проверени европейски партньори.',
+    pod_p2:'Работим предимно с <strong>OPT OnDemand</strong> - европейски производствен партньор с над 20 години опит, 6 печатни технологии и доставка в 24–48 часа.',
+    pod_trust_h:'Защо проверени европейски доставчици',
+    pod_t1_b:'Проверено производство в ЕС', pod_t1_s:'Продукцията се изработва в европейски съоръжения, отговарящи на стандартите на ЕС.',
+    pod_t2_b:'Обработка поръчка 24–48 часа', pod_t2_s:'Бърз обработващ цикъл от поръчка до изпращане, с проследима доставка.',
+    pod_t3_b:'6 печатни технологии', pod_t3_s:'DTG, ситопечат, сублимация, флекс/флок, бродерия и печат върху хартия.',
+    pod_t4_b:'4000+ артикула на склад', pod_t4_s:'Голям избор от заготовки - тениски, чаши, чанти и още, плюс ежедневни доставки.',
+    prod_eyebrow:'Каталог', prod_h3:'Какво можем да персонализираме', prod_p:'Разгледай продуктовите типове. Всеки се произвежда при поръчка по твоя идея.',
+    prod_notice:'Онлайн поръчки не се приемат - свържи се с нас за оферта чрез формата.',
+    gal_eyebrow:'Нашият производствен партньор', gal_h3:'Погледни отвътре в производството',
+    gal_p:'Снимки от съоръженията на нашия проверен европейски доставчик OPT OnDemand - където се отпечатват твоите продукти.',
+    gal_c1:'Автоматизиран ситопечат - до 15 000 артикула на ден', gal_c2:'DTG печат на тениски', gal_c3:'Многоцветен ситопечат', gal_c4:'Чаши със сублимационен печат', gal_c5:'Обработка на поръчки 24/7',
+    req_btn:'Заяви оферта',
+    how_eyebrow:'Процес', how_h2:'Как работи поръчката', how_p:'Прозрачен процес - от идея до готов продукт пред вратата ти.',
+    s1_h:'Свържи се', s1_p:'Попълни формата с продукта, количеството и идеята си. Прикачи дизайн, ако имаш.',
+    s2_h:'Оферта и мостра', s2_p:'Изпращаме цена и при желание тестов печат, за да одобриш качеството.',
+    s3_h:'Производство', s3_p:'Проверен европейски доставчик отпечатва поръчката с избраната технология.',
+    s4_h:'Контрол на качеството', s4_p:'Проверяваме всяка бройка поотделно преди да я предадем на крайния клиент.',
+    s5_h:'Обработка на поръчка', s5_p:'Обработка до 48 часа. Доставката може да отнеме 7–10 работни дни, с проследяване.',
+    chip1:'<b>DTG</b> · Direct to Garment', chip2:'<b>Ситопечат</b> · до 15 000 бр./ден', chip3:'<b>Сублимация</b>', chip4:'<b>Флекс / Флок</b>', chip5:'<b>Бродерия</b>', chip6:'<b>Печат върху хартия</b> · постери',
+    c_eyebrow:'Контакт', c_h2:'Заяви оферта за твоя проект', c_lede:'Разкажи ни какво искаш да персонализираш. Отговаряме с оферта в рамките на 1–2 работни дни.',
+    c_loc:'София, България', c_hours:'Отговор до 1–2 работни дни',
+    f_name:'Име', f_email:'Имейл', f_prod:'Продукт', f_prod_ph:'Избери продукт…',
+    opt_tshirt:'Тениски и облекло', opt_mug:'Чаши и съдове', opt_tote:'Tote чанти', opt_sticker:'Стикери', opt_poster:'Постери и стенно изкуство', opt_cap:'Шапки и аксесоари', opt_other:'Друго / комбинирано',
+    f_qty:'Количество (прибл.)', f_phone:'Телефон (по избор)', f_msg:'Твоята идея', f_consent:'Съгласен съм данните ми да бъдат използвани за отговор на запитването ми, съгласно Политиката за поверителност.',
+    f_submit:'Изпрати запитване', f_note:'Няма да приемаме плащания през сайта - само запитвания.',
+    ok_h:'Благодарим!', ok_p:'Получихме запитването ти и ще се свържем скоро с оферта.',
+    foot_about:'Една творческа марка с много възможности. Дигитални продукти, ръчна изработка, декорация, шиене, арт ателие и print on demand.',
+    foot_dir_h:'Направления', foot_pod:'Print on Demand', foot_dig:'Дигитални продукти', foot_hand:'Ръчна изработка', foot_moss:'Декорация с мъх', foot_sew:'Шиене по поръчка', foot_atel:'Арт ателие за деца', wip_s:'скоро',
+    foot_contact_h:'Контакт', foot_form:'Формуляр за запитване', foot_how:'Как работи', foot_legal:'Политика за поверителност · Бисквитки · Условия',
+    ph:{'name':'Твоето име','email':'you@email.com','quantity':'напр. 25 бр.','phone':'+359…','message':'Опиши дизайна, цветовете, срока…'}
+  },
+  en:{
+    nav_dirs:'Directions', nav_pod:'Print on Demand', nav_how:'How it works', nav_contact:'Contact',
+    hero_eyebrow:'Panda Art Lab · One Brand', hero_h1:'One brand.<br><em>Endless possibilities.</em>',
+    hero_lede:'A creative ecosystem of services and products - united by one mission: inspiration, quality and care in everything we make.',
+    hero_cta1:'Explore Print on Demand', hero_cta2:'All directions',
+    dir_eyebrow:'Directions', dir_h2:'Six directions, one identity',
+    dir_p:'Each direction has its own character and colour, but speaks with a shared voice. Print on Demand is live today - the rest are in the works.',
+    badge_live:'● Live', badge_wip:'◷ In progress',
+    d_pod_h:'Personalized products', d_pod_p:'T-shirts, mugs, bags, stickers and posters - printed on demand by verified European suppliers.', d_pod_f:'Browse products',
+    d_dig_s:'Digital Products', d_dig_h:'Digital products', d_dig_p:'Organizers, planners, Notion and Canva templates, courses and productivity resources.',
+    d_hand_s:'Handmade Bouquets', d_hand_h:'Handmade bouquets', d_hand_p:'Handcrafted bouquets, gifts and personalized pieces for every occasion.',
+    d_moss_s:'Moss Decor', d_moss_h:'Moss decor', d_moss_p:'Preserved moss, green walls, art pieces and interior accents that bring life.',
+    d_sew_s:'Custom Sewing', d_sew_h:'Custom sewing', d_sew_p:'Clothes and accessories in your design and size - quality, style and attention to detail.',
+    d_atel_s:'Kids Atelier', d_atel_h:'Kids art atelier', d_atel_p:'Drawing and craft workshops for children in an inspiring, colourful space.',
+    strip:'<i class="dot"></i>T-shirts<i class="dot"></i>Mugs<i class="dot"></i>Tote bags<i class="dot"></i>Stickers<i class="dot"></i>Posters<i class="dot"></i>Caps<i class="dot"></i>Verified European suppliers',
+    pod_eyebrow:'Panda Art Lab · Print on Demand', pod_h2:'Your design, printed with quality',
+    pod_p1:'Personalized products made to order. You choose the product and the idea - we handle the printing and delivery through verified European partners.',
+    pod_p2:'We work primarily with <strong>OPT OnDemand</strong> - a European production partner with 20+ years of experience, 6 print technologies and 24–48 hour turnaround.',
+    pod_trust_h:'Why verified European suppliers',
+    pod_t1_b:'Verified EU production', pod_t1_s:'Products are made in European facilities that meet EU standards.',
+    pod_t2_b:'24–48 hour turnaround', pod_t2_s:'Fast cycle from order to shipping, with tracked delivery.',
+    pod_t3_b:'6 print technologies', pod_t3_s:'DTG, screen printing, sublimation, flex/flock, embroidery and paper printing.',
+    pod_t4_b:'4000+ items in stock', pod_t4_s:'Large blank selection - tees, mugs, bags and more, plus daily just-in-time delivery.',
+    prod_eyebrow:'Catalog', prod_h3:'What we can personalize', prod_p:'Browse the product types. Each is produced on demand from your idea.',
+    prod_notice:'No online ordering - contact us for a quote via the form.',
+    gal_eyebrow:'Our production partner', gal_h3:'A look inside the production',
+    gal_p:'Photos from the facilities of our verified European supplier OPT OnDemand - where your products are printed.',
+    gal_c1:'Automated screen printing - up to 15,000 items a day', gal_c2:'DTG t-shirt printing', gal_c3:'Multi-colour screen printing', gal_c4:'Dye-sublimation mugs', gal_c5:'24/7 order fulfillment',
+    req_btn:'Request a quote',
+    how_eyebrow:'Process', how_h2:'How ordering works', how_p:'A transparent process - from idea to a finished product at your door.',
+    s1_h:'Get in touch', s1_p:'Fill the form with your product, quantity and idea. Attach a design if you have one.',
+    s2_h:'Quote & sample', s2_p:'We send a price and, if you like, a test print so you can approve the quality.',
+    s3_h:'Production', s3_p:'A verified European supplier prints your order with the chosen technology.',
+    s4_h:'Quality control', s4_p:'We inspect every single item before it goes to the end customer.',
+    s5_h:'Order processing', s5_p:'Processing within 48 hours. Delivery may take 7–10 business days, with tracking.',
+    chip1:'<b>DTG</b> · Direct to Garment', chip2:'<b>Screen print</b> · up to 15,000/day', chip3:'<b>Dye-sublimation</b>', chip4:'<b>Flex / Flock</b>', chip5:'<b>Embroidery</b>', chip6:'<b>Paper printing</b> · posters',
+    c_eyebrow:'Contact', c_h2:'Request a quote for your project', c_lede:'Tell us what you want to personalize. We reply with a quote within 1–2 business days.',
+    c_loc:'Sofia, Bulgaria', c_hours:'Reply within 1–2 business days',
+    f_name:'Name', f_email:'Email', f_prod:'Product', f_prod_ph:'Choose a product…',
+    opt_tshirt:'T-shirts & apparel', opt_mug:'Mugs & drinkware', opt_tote:'Tote bags', opt_sticker:'Stickers', opt_poster:'Posters & wall art', opt_cap:'Caps & accessories', opt_other:'Other / mixed',
+    f_qty:'Quantity (approx.)', f_phone:'Phone (optional)', f_msg:'Your idea', f_consent:'I agree that my data may be used to respond to my enquiry, per the Privacy Policy.',
+    f_submit:'Send enquiry', f_note:'No payments taken on the site - enquiries only.',
+    ok_h:'Thank you!', ok_p:'We received your enquiry and will get back to you with a quote soon.',
+    foot_about:'One creative brand with endless possibilities. Digital products, handmade goods, decor, sewing, kids atelier and print on demand.',
+    foot_dir_h:'Directions', foot_pod:'Print on Demand', foot_dig:'Digital products', foot_hand:'Handmade bouquets', foot_moss:'Moss decor', foot_sew:'Custom sewing', foot_atel:'Kids art atelier', wip_s:'soon',
+    foot_contact_h:'Contact', foot_form:'Enquiry form', foot_how:'How it works', foot_legal:'Privacy Policy · Cookies · Terms',
+    ph:{'name':'Your name','email':'you@email.com','quantity':'e.g. 25 pcs','phone':'+359…','message':'Describe the design, colours, deadline…'}
+  }
+};
+
+let lang='bg';
+
+function renderProducts(){
+  const el=document.getElementById('prods');
+  el.innerHTML=PRODUCTS.map(p=>`
+    <article class="card">
+      <div class="art">
+        <span class="tag">${p.tag}</span>
+        <img src="assets/products/${p.key}.webp" alt="Panda Art Lab ${lang==='bg'?p.bg:p.eg}" loading="lazy">
+      </div>
+      <div class="body">
+        <h4>${lang==='bg'?p.bg:p.eg}</h4>
+        <p>${lang==='bg'?p.bp:p.ep}</p>
+        <div class="tech">${lang==='bg'?p.tag:p.et}</div>
+        <a href="#contact" class="btn btn-primary req" data-prod="${lang==='bg'?p.bg:p.eg}">${I18N[lang].req_btn}</a>
+      </div>
+    </article>`).join('');
+  // pre-select product in form when a card CTA is clicked
+  el.querySelectorAll('.req').forEach(b=>b.addEventListener('click',()=>{
+    const sel=document.querySelector('select[name=product]');
+    [...sel.options].forEach(o=>{if(o.textContent.trim()===b.dataset.prod)sel.value=o.value;});
+  }));
+}
+
+function setLang(l){
+  lang=l;
+  document.documentElement.lang=l;
+  const d=I18N[l];
+  document.querySelectorAll('[data-i]').forEach(n=>{
+    const k=n.getAttribute('data-i');
+    if(d[k]!==undefined) n.innerHTML=d[k];
+  });
+  // placeholders
+  document.querySelectorAll('[data-ph]').forEach(n=>{
+    const key=n.getAttribute('name');
+    if(d.ph[key]) n.placeholder=d.ph[key];
+  });
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));
+  renderProducts();
+}
+
+document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+
+// burger
+document.getElementById('burger').addEventListener('click',function(){
+  document.getElementById('navlinks').classList.toggle('open');
+});
+document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
+
+// year
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+// form submit (Formspree AJAX; falls back to mailto if not configured)
+const form=document.getElementById('podform');
+form.addEventListener('submit',async function(e){
+  const configured=!form.action.includes('FORM_ID');
+  if(!configured){
+    e.preventDefault();
+    // fallback: build mailto so nothing is lost before backend is wired
+    const fd=new FormData(form);
+    const body=[...fd.entries()].map(([k,v])=>`${k}: ${v}`).join('\n');
+    const subj=(lang==='bg'?'Запитване Panda Art Lab - ':'Panda Art Lab enquiry - ')+(fd.get('product')||'');
+ 
+    showOk();
+    return;
+  }
+  e.preventDefault();
+  try{
+    const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+    if(res.ok){showOk();}else{alert(lang==='bg'?'Възникна грешка. Опитай отново или пиши през формата за контакт.':'Something went wrong. Please retry or try the contact form.');}
+  }catch(err){alert(lang==='bg'?'Няма връзка. Опитай пак.':'Connection error. Please retry.');}
+});
+function showOk(){form.style.display='none';document.getElementById('formok').style.display='block';document.getElementById('formok').scrollIntoView({behavior:'smooth',block:'center'});}
+
+setLang('bg');
+</script>
+</body>
+</html>
